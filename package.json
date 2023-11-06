@@ -1,0 +1,26 @@
+{
+  "name": "learning-management-system-backend",
+  "version": "1.0.0",
+  "description": "A backend using express, mongoDB and node (MERN) stack ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/eshwagadkar-alemeno-assignment/learning-management-system-backend.git"
+  },
+  "keywords": [
+    "MongoDB",
+    "Node",
+    "Express",
+    "Backend",
+    "API"
+  ],
+  "author": "Eshwa Gadkar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eshwagadkar-alemeno-assignment/learning-management-system-backend/issues"
+  },
+  "homepage": "https://github.com/eshwagadkar-alemeno-assignment/learning-management-system-backend#readme"
+}
