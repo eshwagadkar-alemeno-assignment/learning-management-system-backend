@@ -22,5 +22,12 @@
   "bugs": {
     "url": "https://github.com/eshwagadkar-alemeno-assignment/learning-management-system-backend/issues"
   },
-  "homepage": "https://github.com/eshwagadkar-alemeno-assignment/learning-management-system-backend#readme"
+  "homepage": "https://github.com/eshwagadkar-alemeno-assignment/learning-management-system-backend#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-jwt": "^8.4.1",
+    "express-validator": "^7.0.1",
+    "mongoose": "^8.0.0"
+  }
 }
