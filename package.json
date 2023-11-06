@@ -4,7 +4,7 @@
   "description": "A backend using express, mongoDB and node (MERN) stack ",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon App.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
