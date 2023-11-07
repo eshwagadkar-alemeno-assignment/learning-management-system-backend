@@ -16,7 +16,7 @@ const createCourse = async (req, res, next) => {
         return next(error);  
     }
 
-    const { name, instructor, description, enrollmentStatus, thumbnail, duration, schedule, location, prerequisites, syllabus, students } = req.body;
+    const { name, instructor, description, enrollmentStatus, thumbnail, duration, schedule, location, prerequisites, syllabus, students, creator } = req.body;
 
 }
 
