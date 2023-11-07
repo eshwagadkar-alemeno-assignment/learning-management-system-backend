@@ -11,14 +11,14 @@ const courseSchema = mongoose.Schema({
     location: { type: String, required: true },
     prerequisites: [{ type: String }],
     syllabus: [ {
-        week: Number,
-        topic: String,
-        content: String
+        week: { type: Number, required: true },
+        topic: { type: String, required: true },
+        content: { type: String, required: true }
     }],
-    students: [ {
-        id: Number,
-        name: String,
-        email: String
+    students: [{
+        id: { type: Number },
+        name: { type: String },
+        email: { type: String }
     }],
     creator: { type: mongoose.Types.ObjectId, required: true, ref: 'User' }
 });
@@ -29,4 +29,4 @@ courseSchema.virtual('id').get(function () {
 
 courseSchema.set('toJSON', { virtuals: true });
 
-module.exports = mongoose.model('Courses', courseSchema);
+module.exports = mongoose.model('Course', courseSchema);
