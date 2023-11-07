@@ -9,6 +9,7 @@ require('dotenv').config();
 const connectDB = require('./mongo-connect');
 connectDB();
 
+const api = process.env.API_URL;
 const PORT = process.env.PORT;
 
 ////////////////////////////////////////////////////////////////////////
@@ -21,6 +22,12 @@ app.use(express.json());
 
 // Middleware to log api request made from frontend
 app.use(morgan('tiny'));
+
+// Registering the imported routes as a middleware
+app.use(`${api}/course`, courseRoute);
+
+// Registering the imported routes as a middleware
+app.use(`${api}/users`, usersRoute);
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
