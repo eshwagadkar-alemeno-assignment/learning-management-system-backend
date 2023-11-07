@@ -1,6 +1,10 @@
 const express = require('express');
 const morgan = require('morgan');
+const HttpError = require('./models/http-error'); 
 
+// Route Imports
+const courseRoute = require('./routes/courses');
+const usersRoute = require('./routes/users');
 
 const app = express();
 
