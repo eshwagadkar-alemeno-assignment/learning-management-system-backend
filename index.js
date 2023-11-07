@@ -6,6 +6,10 @@ const HttpError = require('./models/http-error');
 const courseRoute = require('./routes/courses');
 const usersRoute = require('./routes/users');
 
+// Middleware Imports
+const authJwt = require('./middlewares/jwt');
+const errorHandler = require('./middlewares/requireAuth');
+
 const app = express();
 
 require('dotenv').config(); 
@@ -26,6 +30,9 @@ app.use(express.json());
 
 // Middleware to log api request made from frontend
 app.use(morgan('tiny'));
+
+// Middleware to generate JWT
+app.use(authJwt());
 
 // Registering the imported routes as a middleware
 app.use(`${api}/course`, courseRoute);
