@@ -6,9 +6,6 @@ const userSchema = mongoose.Schema({
     password: { type: String, required: true, minlength: 6 },
     phone: { type: String, required: true },   
     isAdmin: { type: Boolean, required: false },
-    courses: [ { type: mongoose.Types.ObjectId,
-                 required: true, ref: 'Course'
-             } ],
 });
 
 userSchema.virtual('id').get(function () {
